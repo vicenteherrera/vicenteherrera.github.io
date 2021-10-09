@@ -18,55 +18,16 @@
 			padding: 0 0;
 			margin: 0 0;
 		}
-		
-		h1 { 
-			font-family: 'Source Sans Pro', sans-serif;
-			font-size:40px; 
-			margin: 0px 0px; 
-		}
-		h2 { 
-			font-family: 'Gafata', sans-serif;
-			font-size: 22px; font-weight: normal; margin-top: 0; 
-		}
-		h3 { 
-			font-size: 15px;  
-		}
-		ul { list-style-type:none; }
-		.main_div a { 
-			background-color:#F0F0F0; 
-			color: #03626F; 
-			text-decoration:none; 
-			padding: 5px 10px 5px 7px; 
-			margin:3px 3px; 
-			display:inline-block;
-			font-size:14px; 
-			/* background-image: url('bullet_download.png'); background-repeat:no-repeat;);  */
-		}
-		label { 
-			width: 120px; 
-			float: left; 
-			clear:all;  
-			padding: 5px 10px 5px 7px;
-		}
-		.main_div a:hover { background-color:#D4B233;  color:white;}
 		a img { border:0; }
+
 		.header_info {
 			background-color: #222; 
 			color: white;
-			width:645px; 
+			width: 645px; 
 			height: 210px;
-			margin:0px auto 0px auto; 
-			text-align:left;
-			padding: 20px 0px; 
-			
-		}
-		.main_div {
-			width:605px; 
-			margin: 0 auto 20px auto; 
-			text-align:left;
-			border:1px solid #CECECE; 
-			padding: 20px 20px; 
-			background-color:white;
+			margin: 0 auto 0 auto; 
+			text-align: left;
+			padding: 20px 0; 
 		}
 		.header_info a {
 		font-family: 'Gafata', sans-serif;
@@ -83,6 +44,65 @@
 			zoom: 1.04;
 			transition-duration: 0.6s;
 		}
+		.header_info .photo {
+			float:left; 
+			margin-right: 70px;
+		}
+
+		h1 { 
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size:40px; 
+			margin: 0 0; 
+		}
+		h2 { 
+			font-family: 'Gafata', sans-serif;
+			font-size: 22px; font-weight: normal; margin-top: 0; 
+		}
+		h3 { 
+			font-size: 15px;  
+		}
+
+		ul { list-style-type:none; }
+		
+		.main_div {
+			width:605px; 
+			margin: 0 auto 20px auto; 
+			text-align:left;
+			border:1px solid #CECECE; 
+			padding: 20px 20px; 
+			background-color:white;
+		}
+		.main_div a { 
+			background-color:#F0F0F0; 
+			color: #03626F; 
+			text-decoration: none; 
+			padding: 5px 10px 5px 7px; 
+			margin: 3px 3px; 
+			display: inline-block;
+			font-size: 14px; 
+		}
+		.main_div a:hover { background-color:#D4B233;  color:white;}
+		label { 
+			width: 120px; 
+			float: left; 
+			clear: all;  
+			padding: 5px 10px 5px 7px;
+		}
+		
+		@media screen and (max-width: 700px) {
+			.header_info {
+				 width: 100%;
+				 height: auto;
+				 padding: 0 20px;
+			}
+			.photo {
+				display: none;
+			}
+			.main_div {
+				width: 100%;
+			}
+		}
+
 	</style>
 	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:700|Gafata' rel='stylesheet' type='text/css'>
 </head>
@@ -90,41 +110,80 @@
 
 	<div style="background-color: #222; padding: 20px 0;">
 		<div class="header_info">
-			<img src="vicente.jpg" alt="Vicente Herrera"  style="float:left; margin-right: 70px;" /><br /> 
+			<img src="vicente.jpg" alt="Vicente Herrera" class="photo" /><br /> 
 			<h1>Vicente Herrera</h1>
 			<h2>Cloud Native Security Consultant</h2><br />
-			
 			<a href="mailto:vicenteherrera@vicenteherrera.com"><img src="email_icon.png" alt="" style="vertical-align: middle; margin: 3px 8px 3px 0;" />vicenteherrera@vicenteherrera.com</a>
-			
-			
 		</div>
 	</div>
 	
 	<div class="main_div">
 
-	<h3>Connect with me</h3>
-	<ul> 
-		<li>
-			<label>Twitter:</label> <a href="https://www.twitter.com/vicen_herrera" target="_blank">@vicen_herrera</a>
-		</li>
-		<li>
-			<label>LinkedIn:</label> <a href="http://es.linkedin.com/in/vicenteherrera" target="_blank">linkedin.com/in/vicenteherrera</a>
-		</li>
-		<li>
-			<label>Twitch:</label> <a href="https://www.twitch.com/vicen_herrera" target="_blank">twitch.com/vicen_herrera</a>
-		</li>		
-		<li>
-			<label>GitHub:</label> <a href="https://github.com/vicenteherrera">github.com/vicenteherrera</a>
-		</li>
-		<li>
-			<label>Stack Overflow:</label> <a href="http://stackoverflow.com/users/874582/vicenteherrera">Stack Overflow profile</a>
-		</li>
-		<li>
-			<label>Slideshare:</label> <a href="http://es.slideshare.net/mordraug">Docs and presentations</a>
-		</li>	
-	</ul>
-	<br style="clear:both" />
-</div>
+		<h3>Connect with me</h3>
+		<ul> 
+			<li>
+				<label>Twitter:</label> <a href="https://www.twitter.com/vicen_herrera" target="_blank">@vicen_herrera</a>
+			</li>
+			<li>
+				<label>LinkedIn:</label> <a href="http://es.linkedin.com/in/vicenteherrera" target="_blank">linkedin.com/in/vicenteherrera</a>
+			</li>
+			<li>
+				<label>Telegram:</label> <a href="https://t.me/Vicen_herrera" target="_blank">Vicen_herrera</a>
+			</li>	
+			<li>
+				<label>Twitch:</label> <a href="https://www.twitch.com/vicen_herrera" target="_blank">twitch.com/vicen_herrera</a>
+			</li>		
+			<li>
+				<label>GitHub:</label> <a href="https://github.com/vicenteherrera">github.com/vicenteherrera</a>
+			</li>
+			<li>
+				<label>Stack Overflow:</label> <a href="http://stackoverflow.com/users/874582/vicenteherrera">Stack Overflow profile</a>
+			</li>
+			<li>
+				<label>Slideshare:</label> <a href="http://es.slideshare.net/mordraug">Docs and presentations</a>
+			</li>	
+		</ul>
+
+		<h3>Blog posts</h3>
+		<ul>
+			<li><a target="_blank" href="https://sysdig.com/blog/cloud-security-posture-aws/">AWS CIS: Manage cloud security posture on AWS infrastructure</a><br /></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/threat-detection-aws-cloud-containers/">Unified threat detection for AWS cloud and containers</a><br /></li>
+				<!--(<a target="_blank" href="https://cloudsecurityalliance.org/blog/2021/05/17/unified-threat-detection-for-aws-cloud-and-containers/?utm_source=twitter&utm_medium=post">CSA</a>, 
+				<a target="_blank" href="https://aws.amazon.com/blogs/apn/unifying-threat-detection-for-cloud-and-containers-to-reduce-risk-using-sysdig/">AWS</a>)<br />--></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/mitigating-weave-scope/">Preventing malicious use of Weave Scope</a><br /></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/soc-2-compliance/">SOC 2 compliance for containers and Kubernetes security</a><br /></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/nist-800-53-compliance/">NIST 800-53 compliance for containers and Kubernetes</a><br /></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/image-scanning-google-cloud-build/">Image scanning for Google Cloud Build</a><br /></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/aws-threat-detection-cloudtrail/">AWS threat detection using CloudTrail and Sysdig Secure</a><br /></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/fargate-image-scanning/">Automate Fargate image scanning</a> </li>
+			<!--	(<a target="_blank" href="https://aws.amazon.com/blogs/apn/automating-aws-fargate-image-scanning-to-block-container-threats/">AWS</a>)<br /></li> -->
+			<li><a target="_blank" href="https://sysdig.com/blog/securing-tekton-pipelines-openshift/">Securing Tekton pipelines in OpenShift with Sysdig</a><br /></li>
+			<li><a target="_blank" href="https://sysdig.com/blog/malicious-python-libraries-jeilyfish-dateutil/">Protection From Malicious Python Libraries Jeilyfish and Python3-dateutil</a><br /></li>
+		</ul>
+		
+		<h3>Particiaptions</h3>
+		<ul>
+		<li><a target="_blank" href="https://www.mediaopsevents.com/cloudnative2021/home?i=v7ggEe7CdTTOiQsy12BtVZgSftH4nyEy">Cloud Native Compliance and Benchmarks</a><br />
+			Speaker, Cloud Native Days with Kubernetes, 2021</li>
+		<li><a target="_blank" href="https://discuss.kubernetes.io/t/kcdspain2021-detecta-cryptominado-en-tu-infraestructura-con-falco/16309">Detecting cryptomining with Falco</a><br />
+			Speaker, Kubernetes Community Days Spain, 2021</li>
+		<li><a target="_blank" href="https://community.codemotion.com/hackmadrid-27/meetups/monitoreo-en-dockerkubernetes">From DevOps to DevSecOps</a><br />
+			Speaker, CodeMotion, 2021</li>
+		<li><a target="_blank" href="https://youtu.be/M3f6-ioY9rs">Detecting Anomalous Activity in Rancher with Falco</a><br />
+			Speaker, Kubernetes Master Class, Rancher Labs, 2020</li>
+		<li><a target="_blank" href="#">Bins in the cage Falco is watching</a><br />
+			Speaker, BSides Berlin, 2020</li>
+		<li><a target="_blank" href="https://www.youtube.com/watch?v=DD6Rk_7lkI0&list=PLf_Lmegw9Mew65HlRsayJu24hzpzhV98T">Azure serverless for data intelligence</a><br />
+			Speaker, Seville DataBeers, 2019</li>
+		<li><a href="#">Introduction to project management with Scrum</a><br />
+			Speaker, University of Seville, 2017</li>
+		<li><a href="#">GesProSev: Seville Project Management group</a><br />
+			Founder and regular speaker, 2016 to 2019</li>
+		<li><a target="_blank" href="https://youtu.be/AhcuLa0pExc">Sevilla Developers Conference, 2º Edition</a><br />
+			Speaker, Asociación Sevilla UP, 2016</li>
+		</ul>
+
+	</div>
 
 </body>
 </html>
