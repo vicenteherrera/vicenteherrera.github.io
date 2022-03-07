@@ -1,0 +1,57 @@
+==================================================================
+https://keybase.io/vicenteherrera
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://vicenteherrera.com
+  * I am vicenteherrera (https://keybase.io/vicenteherrera) on keybase.
+  * I have a public key ASBhyVrblPv77Eb8eeUdbN_z2rbferH5PG1fr8K6RrlcoQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01014974f4a7604a763a79b8f4c5b0881454d75d85b7f22223ae1725a408b7cad0c30a",
+      "host": "keybase.io",
+      "kid": "012061c95adb94fbfbec46fc79e51d6cdff3dab6df7ab1f93c6d5fafc2ba46b95ca10a",
+      "uid": "9496ad026a198eb2db98b429fd0f3619",
+      "username": "vicenteherrera"
+    },
+    "merkle_root": {
+      "ctime": 1646654634,
+      "hash": "355bbfa7a8037cd4184fc084fb37a8c44a3d24c0faf32a686e0308f880b76a370f7e5f664513d0012a0a78c18a5ad29bdcf5be475198284dffcaef1b4d491172",
+      "hash_meta": "711d944ce1d874e549bf1c903b8f53c4db5e80493f4c4d316eb53487e99dd165",
+      "seqno": 22020819
+    },
+    "service": {
+      "entropy": "NEKR2c6Z78RNTGp48cTXkKAz",
+      "hostname": "vicenteherrera.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.3"
+  },
+  "ctime": 1646654651,
+  "expire_in": 504576000,
+  "prev": "a3f1ba47d1cf076ef44072e6f6bf1c53da98e02f833e23d8db068d0102e42f2e",
+  "seqno": 47,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgYcla25T7++xG/HnlHWzf89q233qx+TxtX6/Cuka5XKEKp3BheWxvYWTESpcCL8Qgo/G6R9HPB270QHLm9r8cU9qY4C+DPiPY2waNAQLkLy7EIC/6DTx2bHQQwQ9gYxBJbjizfWOpQfSnTFV/xQQtzxBQAgHCo3NpZ8RAYjkui9lIqSXPp2aLyfeZUBoPv1KgQ1isxnQy5EU20e+70wS+aP2lLj8kPoLL4Yf1KiDTxGQdQjMtSGFPqhpaBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICID+oEn9crlusnIpsfS7uliyELm+S7M9YvB1ftE20Bgo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vicenteherrera
+
+==================================================================
+
