@@ -80,6 +80,9 @@
 			list-style-type:none; 
 			margin-left:20px;
 		}
+		.header {
+			background-color: #222; padding: 20px 0;
+		}
 		.content {
 			text-align: center;
 			vertical-align: top;
@@ -126,6 +129,9 @@
 		.low { display: none }
 		
 		@media screen and (max-width: 700px) {
+			.header {
+				width: 100%;
+			}
 			.header_info {
 				 width: 100%;
 				 height: auto;
@@ -134,12 +140,15 @@
 			.header_info .photo {
 				max-width: 130px;
 				min-width: 40px;
-				width:20%;
+				width: 20%;
 				margin-right: 20px;
 				margin-right: 20px;
 			}
+			h1 {
+				font-size: 32px;
+			}
 			.header_info a {
-				font-size: 16px;
+				font-size: 14px;
 			}
 			.main_div {
 				width: 100%;
@@ -150,6 +159,7 @@
 			}
 			ul {
 				padding-inline-start: 0;
+				font-size: 14px;
 			}
 		}
 
@@ -165,7 +175,7 @@
 			}
 		}
 	</script>
-	<div style="background-color: #222; padding: 20px 0; width: 100%">
+	<div class="header">
 		<div class="header_info">
 			<img src="vicente.jpg" alt="Vicente Herrera" class="photo" /> 
 			<h1>Vicente Herrera</h1>
