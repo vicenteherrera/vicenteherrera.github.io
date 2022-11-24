@@ -98,7 +98,6 @@
 			text-align:left;
 			padding: 0px 30px; 
 			background-color:white;
-			font-size: 14px; 
 		}
 		.main_div a { 
 			background-color:#F0F0F0; 
@@ -107,7 +106,7 @@
 			padding: 5px 10px 5px 7px; 
 			margin: 3px 0px; 
 			display: inline-block;
-			font-size: 14px; 
+			font-size: 15px;
 		}
 		.main_div a:hover { background-color:#D4B233;  color:white;}
 		label { 
@@ -133,7 +132,7 @@
 				width: 100%;
 			}
 			.header_info {
-				 width: 100%;
+				 width: auto;
 				 height: auto;
 				 padding: 0 20px;
 			}
@@ -148,10 +147,10 @@
 				font-size: 32px;
 			}
 			.header_info a {
-				font-size: 14px;
+				font-size: 16px;
 			}
 			.main_div {
-				width: 100%;
+				width: auto;
 				padding: 5px 10px;
 			}
 			label { 
@@ -159,7 +158,13 @@
 			}
 			ul {
 				padding-inline-start: 0;
-				font-size: 14px;
+				margin-left: 0;
+			}
+			.main_div ul li {
+				font-size: 16px;
+			}
+			.main_div a {
+				font-size: 16px
 			}
 		}
 
@@ -292,7 +297,7 @@
 					Teacher, Espacio Coworking Colaborando, 2014<br /></li>
 				<li  class="low"><a target="_blank" href="https://www.youtube.com/watch?v=I6nzLkb4k6s">Startup Weekend Sevilla 2013</a><br />
 					Mentor, SevillaUp & Techstars, 2013<br /></li>
-				<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">more</a></li>
+				<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">+more</a></li>
 			</ul>
 			<h3>Open Source Contributor</h3>
 			<ul class="open_source">
