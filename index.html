@@ -95,6 +95,7 @@
 			text-align:left;
 			padding: 0px 30px; 
 			background-color:white;
+			font-size: 14px; 
 		}
 		.main_div a { 
 			background-color:#F0F0F0; 
@@ -121,6 +122,8 @@
 		.participations li a {
 			margin-left: -12px;
 		}
+
+		.low { display: none }
 		
 		@media screen and (max-width: 700px) {
 			.header_info {
@@ -128,11 +131,15 @@
 				 height: auto;
 				 padding: 0 20px;
 			}
-			.photo {
-				max-width: 130px;
-			}
 			.header_info .photo {
+				max-width: 130px;
+				min-width: 40px;
+				width:20%;
 				margin-right: 20px;
+				margin-right: 20px;
+			}
+			.header_info a {
+				font-size: 16px;
 			}
 			.main_div {
 				width: 100%;
@@ -150,10 +157,17 @@
 	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:700|Gafata' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-	<div style="background-color: #222; padding: 20px 0;">
+	<script type="text/javascript">
+		function change_display(coll, new_display) {
+			for(var i=0, len=coll.length; i<len; i++)
+			{
+				coll[i].style.display=new_display;
+			}
+		}
+	</script>
+	<div style="background-color: #222; padding: 20px 0; width: 100%">
 		<div class="header_info">
-			<img src="vicente.jpg" alt="Vicente Herrera" class="photo" /><br /> 
+			<img src="vicente.jpg" alt="Vicente Herrera" class="photo" /> 
 			<h1>Vicente Herrera</h1>
 			<h2>Cloud Native Security</h2><br />
 			<a href="mailto:vicenteherrera@vicenteherrera.com"><img src="email_icon.png" alt="" style="vertical-align: middle; margin: 3px 8px 3px 0;" />vicenteherrera@vicenteherrera.com</a>
@@ -169,6 +183,9 @@
 				</li>
 				<li>
 					<label>Email:</label> <a href="mailto:vicenteherrera@vicenteherrera.com" target="_blank">vicenteherrera@vicenteherrera.com</a>
+				</li>
+				<li>
+					<label>Mastodon:</label> <a rel="me" href="https://hachyderm.io/@v">@v@hachyderm.io</a>
 				</li>
 				<li>
 					<label>Twitter:</label> <a href="https://www.twitter.com/v1z3n" target="_blank">@v1z3n</a>
@@ -218,7 +235,7 @@
 				<li><a target="_blank" href="https://sysdig.com/blog/ciem-security-sysdig-secure/">Cloud Infrastructure Entitlements Management (CIEM) with Sysdig Secure</a></li>
 				<li><a target="_blank" href="https://sysdig.com/blog/cloud-security-posture-aws/">AWS CIS: Manage cloud security posture on AWS infrastructure</a><br /></li>
 				<li><a target="_blank" href="https://sysdig.com/blog/threat-detection-aws-cloud-containers/">Unified threat detection for AWS cloud and containers</a> 
-					<a target="_blank" href="https://cloudsecurityalliance.org/blog/2021/05/17/unified-threat-detection-for-aws-cloud-and-containers/?utm_source=twitter&utm_medium=post">CSA</a>
+					<a target="_blank" href="https://cloudsecurityalliance.org/blog/2021/05/17/unified-threat-detection-for-aws-cloud-and-containers/">CSA</a>
 					<a target="_blank" href="https://aws.amazon.com/blogs/apn/unifying-threat-detection-for-cloud-and-containers-to-reduce-risk-using-sysdig/">AWS</a></li>
 				<li><a target="_blank" href="https://sysdig.com/blog/mitigating-weave-scope/">Preventing malicious use of Weave Scope</a><br /></li>
 				<li><a target="_blank" href="https://sysdig.com/blog/soc-2-compliance/">SOC 2 compliance for containers and Kubernetes security</a><br /></li>
@@ -230,53 +247,55 @@
 				<li><a target="_blank" href="https://sysdig.com/blog/securing-tekton-pipelines-openshift/">Securing Tekton pipelines in OpenShift with Sysdig</a><br /></li>
 				<li><a target="_blank" href="https://sysdig.com/blog/malicious-python-libraries-jeilyfish-dateutil/">Protection From Malicious Python Libraries Jeilyfish and Python3-dateutil</a><br /></li>
 			</ul>
-			<h3>Open Source Contributor</h3>
-			<ul class="open_source">
-				<li><a target="_blank" href="https://github.com/falcosecurity/falco/commits?author=vicenteherrera">Falco: Cloud-Native runtime security</a></li>
-				<li><a target="_blank" href="https://github.com/vicenteherrera/falco-workshop">Falco Workshop virtual machines</a></li>
-				<li><a target="_blank" href="https://github.com/sysdiglabs/aks-audit-log/commits?author=vicenteherrera">Azure Kubernetes Service audit log Sysdig integration</a></li>
-			</ul>
 		</div><div class="main_div">
-			<h3>Training Materials</h3>
-			<ul class="training">
-				<li><a target="_blank" href="https://vicenteherrera.com/curso_falco">Falco course: Runtime security on hosts, containers, Kubernetes and cloud (Spanish)</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/kubernetes_tutorial">Kubernetes tutorial: Azure, Terraform, Key Vault, Helm, Skaffold, Prometheus and Grafana</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/curso_desarrollo_web">Web development: HTML, CSS, responsive web design, Bootstrap, JavaScript and PHP (Spanish)</a></li>
-			</ul>
-			<h3>Participations</h3>
+
+			<h3 id="participations">Participations</h3>
 			<ul class="participations">
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=6Ao43iQdEQI">Startup Weekend Sevilla 2021</a><br />
+				<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=6Ao43iQdEQI">Startup Weekend Sevilla 2021</a><br />
 					Mentor, SevillaUp & Techstars, 2021<br /></li>				
-				<li><a target="_blank" href="https://institucional.us.es/innosoft/events/ciberseguridad-containers-kubernetes/">Containers and Kubernetes Security</a><br />
+				<li><a target="_blank" href="https://docs.google.com/presentation/d/1VIrm3cJbyIu60LmH-3t9OR1cvEizJ5CNrc6smAe6GKo/edit?usp=sharing">Containers and Kubernetes Security</a><br />
 					Speaker, InnoSoft Days - University of Seville, 2021<br /></li>			
-				<li><a target="_blank" href="https://www.mediaopsevents.com/cloudnative2021/home?i=v7ggEe7CdTTOiQsy12BtVZgSftH4nyEy">Cloud Native Compliance and Benchmarks</a><br />
+				<li><a target="_blank" href="https://www.techstrongevents.com/cloudnative2021/session/609929/introduction-to-cloud-native-compliance-and-benchmarks">Cloud Native Compliance and Benchmarks</a><br />
 					Speaker, Cloud Native Days with Kubernetes, 2021<br /></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=3a_UjTXsITs">Detecting cryptomining with Falco (Spanish)</a><br />
+				<li><a target="_blank" href="https://www.youtube.com/watch?v=3a_UjTXsITs">🎬 Detecting cryptomining with Falco (Spanish)</a><br />
 					Speaker, Kubernetes Community Days Spain, 2021</li>
 				<li><a target="_blank" href="https://community.codemotion.com/hackmadrid-27/meetups/monitoreo-en-dockerkubernetes">From DevOps to DevSecOps</a><br />
 					Speaker, CodeMotion, 2020</li>
-				<li><a target="_blank" href="https://youtu.be/M3f6-ioY9rs">Detecting Anomalous Activity in Rancher with Falco</a><br />
+				<li><a target="_blank" href="https://youtu.be/M3f6-ioY9rs">🎬 Detecting Anomalous Activity in Rancher with Falco</a><br />
 					Speaker, Kubernetes Master Class, Rancher Labs, 2020</li>
-				<li><a target="_blank" href="#">Bins in the cage Falco is watching</a><br />
+				<li><a target="_blank" href="http://www.securitybsides.com/w/page/138211752/BSidesBerlin2020">Bins in the cage Falco is watching</a><br />
 					Speaker, BSides Berlin, 2020</li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=iyyecB6dPUA&t=894s">Falco kernel and Kubernetes security (Spanish)</a><br />
+				<li><a target="_blank" href="https://www.youtube.com/watch?v=iyyecB6dPUA&t=894s">🎬 Falco kernel and Kubernetes security (Spanish)</a><br />
 					Speaker, HackMadrid 2020
 				</li>
-				</li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=DD6Rk_7lkI0&list=PLf_Lmegw9Mew65HlRsayJu24hzpzhV98T">Azure serverless for data intelligence</a><br />
+				<li><a target="_blank" href="https://www.youtube.com/watch?v=DD6Rk_7lkI0&list=PLf_Lmegw9Mew65HlRsayJu24hzpzhV98T">🎬 Azure serverless for data intelligence (Spanish)</a><br />
 					Speaker, Seville DataBeers, 2019</li>
-				<li><a href="#">Introduction to project management with Scrum</a><br />
+				<li class="low"><a href="#">Introduction to project management with Scrum</a><br />
 					Speaker, University of Seville, 2017</li>
-				<li><a target="_blank" href="https://sevillaworld.com/startup-weekend-sevilla/">Startup Weekend Sevilla Videogames 2016</a><br />
+				<li class="low"><a target="_blank" href="https://sevillaworld.com/startup-weekend-sevilla/">Startup Weekend Sevilla Videogames 2016</a><br />
 					Mentor, SevillaUp & Techstars, 2016<br /></li>					
-				<li><a href="#">GesProSev: Seville Project Management group</a><br />
+				<li class="low"><a href="#">GesProSev: Seville Project Management group</a><br />
 					Founder and regular speaker, 2016 to 2019</li>
-				<li><a target="_blank" href="https://youtu.be/AhcuLa0pExc">Manage yourself as a team</a><br />
+				<li class="low"><a target="_blank" href="https://youtu.be/AhcuLa0pExc">Manage yourself as a team</a><br />
 					Speaker, Sevilla Developers Conference 2º Edition, 2016</li>
-				<li><a target="_blank" href="https://sevilla.abc.es/provincia-alcala-de-guadaira/20140520/sevi-como-hacer-sitio-propio-201405201855.html">Cómo hacer una web en dos horas a coste cero</a><br />
+				<li class="low"><a target="_blank" href="https://sevilla.abc.es/provincia-alcala-de-guadaira/20140520/sevi-como-hacer-sitio-propio-201405201855.html">Cómo hacer una web en dos horas a coste cero</a><br />
 					Teacher, Espacio Coworking Colaborando, 2014<br /></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=I6nzLkb4k6s">Startup Weekend Sevilla 2013</a><br />
-					Mentor, SevillaUp & Techstars, 2013<br /></li>			
+				<li  class="low"><a target="_blank" href="https://www.youtube.com/watch?v=I6nzLkb4k6s">Startup Weekend Sevilla 2013</a><br />
+					Mentor, SevillaUp & Techstars, 2013<br /></li>
+				<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">more</a></li>
+			</ul>
+			<h3>Open Source Contributor</h3>
+			<ul class="open_source">
+				<li><a target="_blank" href="https://github.com/vicenteherrera/psa-checker">psa-checker: Pod Security Standards static checker (creator)</a></li>
+				<li><a target="_blank" href="https://github.com/vicenteherrera/falco-workshop">Falco Workshop virtual machines (creator)</a></li>				
+				<li><a target="_blank" href="https://github.com/falcosecurity/falco/commits?author=vicenteherrera">Falco: Cloud-Native runtime security</a></li>
+				<li><a target="_blank" href="https://github.com/sysdiglabs/aks-audit-log/commits?author=vicenteherrera">Azure Kubernetes Service audit log Sysdig integration (creator)</a></li>
+			</ul>
+			<h3>Training Materials</h3>
+			<ul class="training">
+				<li><a target="_blank" href="https://vicenteherrera.com/curso_falco">🎬 Falco course: Runtime security on hosts, containers, Kubernetes and cloud (Spanish)</a></li>
+				<li><a target="_blank" href="https://vicenteherrera.com/kubernetes_tutorial">Kubernetes tutorial: Azure, Terraform, Key Vault, Helm, Skaffold, Prometheus and Grafana</a></li>
+				<li><a target="_blank" href="https://vicenteherrera.com/curso_desarrollo_web">Web development: HTML, CSS, responsive web design, Bootstrap, JavaScript and PHP (Spanish)</a></li>
 			</ul>
 		</div>
 	</div>
