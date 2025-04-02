@@ -211,7 +211,31 @@
 				max-width: 100%;
 			}
 		}
+		.social-icons {
 
+		}
+		.social-icons a {
+			background-color: transparent !important;
+			padding: 5px !important;
+			margin: 0 10px !important;
+			display: inline-block !important;
+			width: auto !important;
+		}
+		.social-icons a:hover {
+			background-color: transparent !important;
+			opacity: 0.7;
+		}
+		.social-icons img {
+			width: 24px;
+			height: 24px;
+			vertical-align: middle;
+			filter: invert(50%); /* Makes black SVGs into a medium gray */
+		}
+		@media screen and (max-width: 700px) {
+			.social-icons a {
+				padding: 10px !important;
+			}
+		}
 	</style>
 	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:700|Gafata' rel='stylesheet' type='text/css'>
 </head>
@@ -265,26 +289,23 @@
 
 				<h3>Connect with me</h3>
 				<ul>
+					<!--
 					<li>
 						<label>Blog:</label> <a href="/blog" target="_blank">The Vlog</a>
 					</li>
+					-->
 					<li>
 						<label>Email:</label> <a id="email" href="mailto:vicenteherrera@vicenteherrera.com" target="_blank">vicenteherrera@vicenteherrera.com</a>
 					</li>
 					<li>
 						<label>LinkedIn:</label> <a href="http://es.linkedin.com/in/vicenteherrera" target="_blank">linkedin.com/in/vicenteherrera</a>
 					</li>
-					<li>
-						<label>BlueSky:</label> <a href="https://bsky.app/profile/vicenteherrera.com" target="_blank">@vicenteherrera.com</a>
-					</li>				
-					<li>
-						<label>Fediverse:</label> <a rel="me" href="https://hachyderm.io/@v">@v@hachyderm.io</a>
-					</li>
-					<li>
-						<label>Telegram:</label> <a href="https://t.me/Vicen_herrera" target="_blank">Vicen_herrera</a>
-					</li>
-					<li>
-						<label>GitHub:</label> <a href="https://github.com/vicenteherrera">github.com/vicenteherrera</a>
+					<li class="social-icons">
+						<label>More:</label>
+						<a href="https://bsky.app/profile/vicenteherrera.com" target="_blank" title="BlueSky"><img src="assets/bluesky.svg" alt="BlueSky"></a>
+						<a rel="me" href="https://hachyderm.io/@v" title="Mastodon"><img src="assets/mastodon.svg" alt="Mastodon"></a>
+						<a href="https://t.me/Vicen_herrera" target="_blank" title="Telegram"><img src="assets/telegram.svg" alt="Telegram"></a>
+						<a href="https://github.com/vicenteherrera" target="_blank" title="GitHub"><img src="assets/github.svg" alt="GitHub"></a>
 					</li>
 					<!--				
 					<li>
@@ -359,6 +380,8 @@
 			<div id="participations" class="main_div">
 				<h3 id="participations">Participations</h3>
 				<ul class="participations with-video">
+					<li><a href="https://colocatedeventseu2025.sched.com/event/1u5g3/open-source-tools-to-empower-ethical-and-robust-ai-systems-vicente-herrera-alberto-rodriguez-fernandez-control-plane">🔥<b>New!</b>: Open Source Tools To Empower Ethical and Robust AI Systems</a><br />
+						<span class="position">Speaker, Cloud Native + Kubernetes AI Day, London, 1st April 2025</span></li>
 					<li><a target="_blank" href="https://control-plane.io/posts/future-open-source-llm-killchains-a-talk-by-vicente-herrera/">🎬 Future Open Source LLM Killl Chains</a><br />
 						<span class="position">Speaker, Secure AI Summit (CloudNative SecurityCon NA), Seattle, June 2024</span><br />
 					</li>
@@ -370,9 +393,7 @@
 					</li>
 				</ul>
 				<iframe width="560" height="315" style="background-color: #ccc;" src="https://www.youtube.com/embed/WhL7WimKWpg?si=cNjGsfUa09oFuifS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<ul class="participations">
-					<li><a href="https://colocatedeventseu2025.sched.com/event/1u5g3/open-source-tools-to-empower-ethical-and-robust-ai-systems-vicente-herrera-alberto-rodriguez-fernandez-control-plane">🔥<b>Upcoming!</b>: Open Source Tools To Empower Ethical and Robust AI Systems</a><br />
-						<span class="position">Speaker, Cloud Native + Kubernetes AI Day, London, 1st April 2025</span></li>
+				<ul class="participations" id="participations-old">
 					<li><a href="https://www.youtube.com/@aisafetylondon">AI Safety London - Inaugural Talks</a><br />
 						<span class="position">Host, AI Safety London, London, 27 February 2025</span></li>
 					<li><a target="_blank" href="https://www.youtube.com/watch?v=OtltWiMAIDA">🎬 RIESGOS.AI : ¿Peligro o evolución para la humanidad? (Spanish)</a><br />
@@ -437,7 +458,7 @@
 						<span class="position">Teacher, Espacio Coworking Colaborando, 2014</span></li>
 					<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=I6nzLkb4k6s">Startup Weekend Sevilla 2013</a><br />
 						<span class="position">Mentor, SevillaUp & Techstars, 2013</span></li>
-					<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">+more</a></li>
+					<li><a href="#participations-old" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">+more</a></li>
 				</ul>	
 			</div>
 			<div id="training" class="main_div">
