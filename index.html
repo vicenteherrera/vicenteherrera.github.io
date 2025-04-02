@@ -89,16 +89,23 @@
 			vertical-align: top;
 			margin-bottom: 30px;
 			background-color: white;
-			display: inline-block;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0;
 			padding: 10px 0;
+		}
+		.content-column {
+			display: flex;
+			flex-direction: column;
+			width: 550px;
 		}
 		.main_div {
 			vertical-align: top;
-			display: inline-block;
 			width: 550px; 
-			text-align:left;
+			text-align: left;
 			padding: 0px 30px; 
-			background-color:white;
+			background-color: white;
 		}
 		.main_div a { 
 			background-color:#F0F0F0; 
@@ -153,6 +160,17 @@
 			.header_info a {
 				font-size: 17px;
 			}
+			.content {
+				flex-direction: column;
+				align-items: stretch;
+			}
+			.content-column {
+				width: 100%;
+			}
+			#about-me { order: 1; }
+			#participations { order: 2; }
+			#author { order: 3; }
+			#training { order: 4; }
 			.main_div {
 				width: auto;
 				padding: 5px 10px;
@@ -214,221 +232,227 @@
 		</div>
 	</div>
 	<div class="content">
-		<div class="main_div">
-			<h3>About me</h3>
-			<ul>
-				<li>
-					<label>Control Plane</label> <a href="https://control-plane.io" target="_blank">Principal Consultant, AI & Kubernetes Cybersecurity</a>
-				</li>
-				<li class="two_lines">
-					<label>Loyola University Lecturer</label> <a href="https://www.uloyola.es/masteres/inteligencia-artificial" target="_blank">Blockchain, AI Ethics, Master AI and Data Analytics</a>
-				</li>
-				<li>
-					<label>ML Author, O'Reilly</label> <a href="https://bit.ly/bica_vh" target="_blank">Building Intelligent Cloud Applications</a>
-				</li>
-			</ul>
-			<h3>Active in</h3>
-			<ul>
-				<li>
-					<label>Community Founder</label> <a href="https://community.cncf.io/cloud-native-sevilla/">Cloud Native Sevilla</a>
-				</li>
-				<li>
-					<label>Core Maintainer</label> <a target="_blank" href="https://www.finos.org/ai-readiness">AI Readiness (FINOS)</a></li>
-				</li>
-				<li>
-					<label>Community Founder</label> <a href="https://www.meetup.com/ai-safety-london/">AI Safety London</a>
-				</li>
-				<li>
-					<label>YouTube channel</label> <a href="https://www.youtube.com/@ThisIsExponential">This is Exponential</a>
-				</li>
-			</ul>
+		<div class="content-column">
+			<div id="about-me" class="main_div">
+				<h3>About me</h3>
+				<ul>
+					<li>
+						<label>Control Plane</label> <a href="https://control-plane.io" target="_blank">Principal Consultant, AI & Kubernetes Cybersecurity</a>
+					</li>
+					<li class="two_lines">
+						<label>Loyola University Lecturer</label> <a href="https://www.uloyola.es/masteres/inteligencia-artificial" target="_blank">GenAI, AI Ethics, Blockchain. Master AI and Data Analytics</a>
+					</li>
+					<li>
+						<label>ML Author, O'Reilly</label> <a href="https://bit.ly/bica_vh" target="_blank">Building Intelligent Cloud Applications</a>
+					</li>
+				</ul>
+				<h3>Active in</h3>
+				<ul>
+					<li>
+						<label>Community Founder</label> <a href="https://community.cncf.io/cloud-native-sevilla/">Cloud Native Sevilla</a>
+					</li>
+					<li>
+						<label>Core Maintainer</label> <a target="_blank" href="https://www.finos.org/ai-readiness">AI Readiness (FINOS)</a></li>
+					</li>
+					<li>
+						<label>Community Founder</label> <a href="https://www.meetup.com/ai-safety-london/">AI Safety London</a>
+					</li>
+					<li>
+						<label>YouTube channel</label> <a href="https://www.youtube.com/@ThisIsExponential">This is Exponential</a>
+					</li>
+				</ul>
 
-			<h3>Connect with me</h3>
-			<ul>
-				<li>
-					<label>Blog:</label> <a href="/blog" target="_blank">The Vlog</a>
-				</li>
-				<li>
-					<label>Email:</label> <a id="email" href="mailto:vicenteherrera@vicenteherrera.com" target="_blank">vicenteherrera@vicenteherrera.com</a>
-				</li>
-				<li>
-					<label>LinkedIn:</label> <a href="http://es.linkedin.com/in/vicenteherrera" target="_blank">linkedin.com/in/vicenteherrera</a>
-				</li>
-				<li>
-					<label>BlueSky:</label> <a href="https://bsky.app/profile/vicenteherrera.com" target="_blank">@vicenteherrera.com</a>
-				</li>				
-				<li>
-					<label>Fediverse:</label> <a rel="me" href="https://hachyderm.io/@v">@v@hachyderm.io</a>
-				</li>
-				<li>
-					<label>Telegram:</label> <a href="https://t.me/Vicen_herrera" target="_blank">Vicen_herrera</a>
-				</li>
-				<li>
-					<label>GitHub:</label> <a href="https://github.com/vicenteherrera">github.com/vicenteherrera</a>
-				</li>
-				<!--				
-				<li>
-					<label>X:</label> <a href="https://www.twitter.com/v1z3n" target="_blank">@v1z3n</a>
-				</li>
-				<li>
-					<label>Slideshare:</label> <a href="http://es.slideshare.net/mordraug">Docs and presentations</a>
-				</li>
-				<li>
-					<label>Twitch:</label> <a href="https://www.twitch.com/vicen_herrera" target="_blank">twitch.com/vicen_herrera</a>
-				</li>
-				<li>
-					<label>Stack Overflow:</label> <a href="http://stackoverflow.com/users/874582/vicenteherrera">Stack Overflow profile</a>
-				</li>
-				-->
-			</ul>
-			<h3>Published Author</h3>
-			<ul>
-				<li><a target="_blank" href="https://bit.ly/bica_o"
-					style="display: inline-flex;align-items: center;"><img src="bica.jpg" style="width:65px; height: 85px; border:1px solid #ccc; margin:0 10px 5px 0; float: left;" alt="Book cover" />
-					<div>
-						Building Intelligent Cloud Applications<br>
-						<small>Azure Machine Learning and Serverless Cloud Services</small><br>
-						<small>O'Reilly Media</small>
-					</div>
-				</a>
-				</li>
-			</ul>
-			<h3 style="clear:both;">Personal Blog Posts</h3>
-			<ul>
-				<li><a target="_blank" href="https://vicenteherrera.com/blog/log4j-part-iii/">Log4j 2 vulnerability, part III: Prevention, mitigation and fixing</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/blog/log4j-part-ii/">Log4j 2 vulnerability, part II: Kubernetes POC</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/blog/log4j-part-i/">Log4j 2 vulnerability, part I: History</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/blog/what-is-a-cve/">What is a CVE?</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/blog/intro-mitre-attack/">Introduction to MITRE ATT&CK</a></li>
-			</ul>
-			<h3>External Blog Posts</h3>
-			<ul>
-				
-				<li><a target="_blank" href="https://control-plane.io/posts/future-open-source-llm-killchains-a-talk-by-vicente-herrera/">Future Open Source LLM Killchains! A Talk by Vicente Herrera</a></li>				
-				<li><a target="_blank" href="https://control-plane.io/posts/bringing-light-to-risks-lurking-in-the-black-boxes-of-ai-models/">Bringing light to risks lurking in the black boxes of AI models</a></li>				
-				<li><a target="_blank" href="https://malditasconsultoras.com/entrevista-a-vicente-herrera-un-todo-terreno-del-mundo-it/">Entrevista a Vicente Herrera: Un todo terreno del mundo IT</a></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/ciem-security-sysdig-secure/">Cloud Infrastructure Entitlements Management (CIEM) with Sysdig Secure</a></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/cloud-security-posture-aws/">AWS CIS: Manage cloud security posture on AWS infrastructure</a><br /></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/threat-detection-aws-cloud-containers/">Unified threat detection for AWS cloud and containers</a> 
-					<a target="_blank" href="https://cloudsecurityalliance.org/blog/2021/05/17/unified-threat-detection-for-aws-cloud-and-containers-to-reduce-risk-using-sysdig/">CSA</a>
-					<a target="_blank" href="https://aws.amazon.com/blogs/apn/unifying-threat-detection-for-cloud-and-containers-to-reduce-risk-using-sysdig/">AWS</a></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/mitigating-weave-scope/">Preventing malicious use of Weave Scope</a><br /></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/soc-2-compliance/">SOC 2 compliance for containers and Kubernetes security</a><br /></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/nist-800-53-compliance/">NIST 800-53 compliance for containers and Kubernetes</a><br /></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/image-scanning-google-cloud-build/">Image scanning for Google Cloud Build</a><br /></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/aws-threat-detection-cloudtrail/">AWS threat detection using CloudTrail and Sysdig Secure</a><br /></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/fargate-image-scanning/">Automate Fargate image scanning</a>
-					<a target="_blank" href="https://aws.amazon.com/blogs/apn/automating-aws-fargate-image-scanning-to-block-container-threats/">AWS</a></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/securing-tekton-pipelines-openshift/">Securing Tekton pipelines in OpenShift with Sysdig</a><br /></li>
-				<li><a target="_blank" href="https://sysdig.com/blog/malicious-python-libraries-jeilyfish-dateutil/">Protection From Malicious Python Libraries Jeilyfish and Python3-dateutil</a><br /></li>
-			</ul>
-			<h3>Open Source</h3>
-			<ul class="open_source">
-				<li><a target="_blank" href="https://github.com/finos/ai-readiness">Fintech Open Source Foundation - AI Readiness (core team)</a></li>
-				<li><a target="_blank" href="https://github.com/finos/common-cloud-controls">Fintech Open Source Foundation - Common Cloud Controls (maintainer)</a></li>
-				<li><a target="_blank" href="https://github.com/vicenteherrera/psa-checker">psa-checker: Pod Security Standards static checker (creator)</a></li>
-				<li><a target="_blank" href="https://github.com/vicenteherrera/falco-workshop">Falco Workshop virtual machines (creator)</a></li>				
-				<li><a target="_blank" href="https://github.com/falcosecurity/falco/commits?author=vicenteherrera">Falco: Cloud-Native runtime security</a></li>
-				<li><a target="_blank" href="https://github.com/sysdiglabs/aks-audit-log/commits?author=vicenteherrera">Azure Kubernetes Service audit log Sysdig integration</a></li>
-			</ul>
-
-		</div><div class="main_div">
-
-			<h3 id="participations">Participations</h3>
-			<ul class="participations with-video">
-				<li><a target="_blank" href="https://control-plane.io/posts/future-open-source-llm-killchains-a-talk-by-vicente-herrera/">🎬 Future Open Source LLM Killl Chains</a><br />
-					<span class="position">Speaker, Secure AI Summit (CloudNative SecurityCon NA), Seattle, June 2024</span><br />
-				</li>
-			</ul>
-			<iframe width="560" height="315" style="background-color: #ccc;" src="https://www.youtube.com/embed/AQi59puGs94?si=qlT5EFnQiCTBzqS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			<ul class="participations with-video">	
-				<li><a target="_blank" href="https://control-plane.io/posts/bringing-light-to-risks-lurking-in-the-black-boxes-of-ai-models/">🎬 Bringing light to risks lurking in the black boxes of AI models</a><br />
-					<span class="position">Speaker, State of Open Con 2024, London, February 2024</span><br />
-				</li>
-			</ul>
-			<iframe width="560" height="315" style="background-color: #ccc;" src="https://www.youtube.com/embed/WhL7WimKWpg?si=cNjGsfUa09oFuifS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			<ul class="participations">
-				
-				<li><a href="https://colocatedeventseu2025.sched.com/event/1u5g3/open-source-tools-to-empower-ethical-and-robust-ai-systems-vicente-herrera-alberto-rodriguez-fernandez-control-plane">🔥<b>Upcoming!</b>: Open Source Tools To Empower Ethical and Robust AI Systems</a><br />
-					<span class="position">Speaker, Cloud Native + Kubernetes AI Day, London, 1st April 2025</span></li>
-				<li><a href="https://www.youtube.com/@aisafetylondon">AI Safety London - Inaugural Talks</a><br />
-					<span class="position">Host, AI Safety London, London, 27 February 2025</span></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=OtltWiMAIDA">🎬 RIESGOS.AI : ¿Peligro o evolución para la humanidad? (Spanish)</a><br />
-					<span class="position">Debate, xHubAI, Agosto 2024</span></li>
-				<li><a target="_blank" href="https://openwebinars.net/cursos/ejecuta-modelos-ia-seguros/">Ejecuta Modelos de IA sin riesgos de seguridad</a><br />
-					<span class="position">Masterclass, Openwebinars, June 2024</span></li>
-				<li><a target="_blank" href="https://bit.ly/blockchain-ing">Blockchain: Qué es, y qué soluciona</a><br />
-					<span class="position">Masterclass, Colegio Oficial de Ingenieros Informáticos Andalucía Occidental, May 2024</span></li>				
-				<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=vhw_mp7R7LM">🎬 TESCREAL : El acrónimo de los sueños y pesadillas sobre Inteligencia Artificial (Spanish)</a><br />
-					<span class="position">Debate, xHubAI, April 2024</span></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=cbw2jju0oq0">🎬 Seguridad AI: ¿Es la era de la Inteligencia Artificial segura para la Humanidad? (Spanish)</a><br />
-					<span class="position">Interview, xHubAI, March 2024</span></li>
-				<li class="low"><a target="_blank" href="https://www.meetup.com/ia-generativa-sevilla/events/298308303/">Evita crear a Skynet: inteligencia artificial segura y justa</a><br />
-					<span class="position">Speaker, IA Generativa Sevilla, Sevilla, January 2024</span></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=7L1qyhq_lr0">🎬 Advanced EKS Networking (Spanish)</a><br />
-					<span class="position">Speaker, Kubernetes Community Days Spain, December 2023</span></li>
-				<li class="low"><a target="_blank" href="https://posgradoadministracion.unmsm.edu.pe/actualidad/eventos/visiones-comerciales-globales-1700267508241">Navegando por el Nuevo Horizonte: Inteligencia Artificial, Oportunidades de Negocio y Riesgos Asociados</a><br />
-					<span class="position">Speaker, Foro Internacional Visiones Comerciales Globales, Universidad Nacional Mayor San Marcos, November 2023</span></li>
-				<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=FqscrNUB1jw">🎬 Minikube flash talk (Spanish)</a><br />
-					<span class="position">Founder, Speaker, Cloud Native Sevilla, November 2023</span></li>
-				<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=x3CSVGiXOy0">🎬 Presentación comunidad Cloud Native Sevilla (Spanish)</a><br />
-					<span class="position">Founder, Speaker, Cloud Native Sevilla, October 2023</span></li>
-				<li><a target="_blank" href="https://cudacu.com/nuevas-oportunidades-de-negocio-en-la-ia/">Nuevas oportunidades de negocio en la IA</a><br />
-					<span class="position">Speaker, Cudacu, May 2023</span></li>
-				<li class="low"><a target="_blank" href="https://esoliupo.es/actividades-realizadas/cybersec-talks/">Historia de la vulnerabilidad Log4j</a><br />
-					<span class="position">Speaker, ESOLIUPO, March 2023</span></li>
-				<li><a target="_blank" href="https://www.meetup.com/fullstacksevilla/events/291726888/">Seguridad de cero a cien con containers y Kubernetes</a><br />
-					<span class="position">Speaker, Full Stack Sevilla, March 2023</span></li>
-				<li ><a target="_blank" href="https://www.youtube.com/watch?v=oHhGczTizYQ">🎬 Pod Security Standards and Admission (Spanish)</a><br />
-					<span class="position">Speaker, Cloud App Developers, December 2023</span></li>				
-				<li class="low"><a target="_blank" href="https://www.facebook.com/giraldafm/videos/577912777272565">📻 Ecosistema Profesional - Inteligencia Artificial (Spanish)</a><br />
-					<span class="position">Expert guest, Giralda FM Radio, July 2022</span></li>
-				<li><a target="_blank" href="https://www.facebook.com/giraldafm/videos/573866724140475">📻 Ecosistema Profesional - Metaverso (Spanish)</a><br />
-					<span class="position">Expert guest, Giralda FM Radio, June 2022</span></li>
-				<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=6Ao43iQdEQI">Startup Weekend Sevilla 2021</a><br />
-					<span class="position">Mentor, SevillaUp & Techstars, 2021</span></li>
-				<li class="low"><a target="_blank" href="https://docs.google.com/presentation/d/1VIrm3cJbyIu60LmH-3t9OR1cvEizJ5CNrc6smAe6GKo/edit?usp=sharing">Containers and Kubernetes Security</a><br />
-					<span class="position">Speaker, InnoSoft Days - University of Seville, 2021</span></li>			
-				<li class="low"><a target="_blank" href="https://www.techstrongevents.com/cloudnative2021/session/609929/introduction-to-cloud-native-compliance-and-benchmarks">Cloud Native Compliance and Benchmarks</a><br />
-					<span class="position">Speaker, Cloud Native Days with Kubernetes, 2021</span></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=3a_UjTXsITs">🎬 Detecting cryptomining with Falco (Spanish)</a><br />
-					<span class="position">Speaker, Kubernetes Community Days Spain, 2021</span></li>
-				<li class="low"><a target="_blank" href="https://community.codemotion.com/hackmadrid-27/meetups/monitoreo-en-dockerkubernetes">From DevOps to DevSecOps</a><br />
-					<span class="position">Speaker, CodeMotion, 2020</li>
-				<li><a target="_blank" href="https://youtu.be/M3f6-ioY9rs">🎬 Detecting Anomalous Activity in Rancher with Falco</a><br />
-					<span class="position">Speaker, Kubernetes Master Class, Rancher Labs, 2020</span></li>
-				<li class="low"><a target="_blank" href="http://www.securitybsides.com/w/page/138211752/BSidesBerlin2020">Bins in the cage Falco is watching</a><br />
-					<span class="position">Speaker, BSides Berlin, 2020</span></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=iyyecB6dPUA&t=894s">🎬 Falco kernel and Kubernetes security (Spanish)</a><br />
-					<span class="position">Speaker, HackMadrid 2020</span></li>
-				<li><a target="_blank" href="https://www.youtube.com/watch?v=DD6Rk_7lkI0&list=PLf_Lmegw9Mew65HlRsayJu24hzpzhV98T">🎬 Azure serverless for data intelligence (Spanish)</a><br />
-					<span class="position">Speaker, Seville DataBeers, 2019</span></li>
-				<li class="low"><a href="#">Introduction to project management with Scrum</a><br />
-					<span class="position">Speaker, University of Seville, 2017</span></li>
-				<li class="low"><a target="_blank" href="https://sevillaworld.com/startup-weekend-sevilla/">Startup Weekend Sevilla Videogames 2016</a><br />
-					<span class="position">Mentor, SevillaUp & Techstars, 2016</span></li>					
-				<li class="low"><a href="#">GesProSev: Seville Project Management group</a><br />
-					<span class="position">Founder and regular speaker, 2016 to 2019</span></li>
-				<li class="low"><a target="_blank" href="https://youtu.be/AhcuLa0pExc">Manage yourself as a team</a><br />
-					<span class="position">Speaker, Sevilla Developers Conference 2º Edition, 2016</span></li>
-				<li class="low"><a target="_blank" href="https://sevilla.abc.es/provincia-alcala-de-guadaira/20140520/sevi-como-hacer-sitio-propio-201405201855.html">Cómo hacer una web en dos horas a coste cero</a><br />
-					<span class="position">Teacher, Espacio Coworking Colaborando, 2014</span></li>
-				<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=I6nzLkb4k6s">Startup Weekend Sevilla 2013</a><br />
-					<span class="position">Mentor, SevillaUp & Techstars, 2013</span></li>
-				<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">+more</a></li>
-			</ul>
-			<h3>Training</h3>
-			<ul class="training">
-				<li><a target="_blank" href="https://vicenteherrera.com/curso_falco">🎬 Falco course: Runtime security on hosts, containers, Kubernetes and cloud (Spanish)</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/kubernetes_tutorial">Kubernetes tutorial: Azure, Terraform, Key Vault, Helm, Skaffold, Prometheus and Grafana</a></li>
-				<li><a target="_blank" href="https://vicenteherrera.com/curso_desarrollo_web">Web development: HTML, CSS, responsive web design, Bootstrap, JavaScript and PHP (Spanish)</a></li>
-				<!--
-				<li><a href="#">Agile and Scrum</a></li>
-				<li><a href="#">Microsoft Project</a></li>
-				<li><a href="#">Transmedia</a></li>
-				<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">+more</a></li></li>
-				-->
-			</ul>
+				<h3>Connect with me</h3>
+				<ul>
+					<li>
+						<label>Blog:</label> <a href="/blog" target="_blank">The Vlog</a>
+					</li>
+					<li>
+						<label>Email:</label> <a id="email" href="mailto:vicenteherrera@vicenteherrera.com" target="_blank">vicenteherrera@vicenteherrera.com</a>
+					</li>
+					<li>
+						<label>LinkedIn:</label> <a href="http://es.linkedin.com/in/vicenteherrera" target="_blank">linkedin.com/in/vicenteherrera</a>
+					</li>
+					<li>
+						<label>BlueSky:</label> <a href="https://bsky.app/profile/vicenteherrera.com" target="_blank">@vicenteherrera.com</a>
+					</li>				
+					<li>
+						<label>Fediverse:</label> <a rel="me" href="https://hachyderm.io/@v">@v@hachyderm.io</a>
+					</li>
+					<li>
+						<label>Telegram:</label> <a href="https://t.me/Vicen_herrera" target="_blank">Vicen_herrera</a>
+					</li>
+					<li>
+						<label>GitHub:</label> <a href="https://github.com/vicenteherrera">github.com/vicenteherrera</a>
+					</li>
+					<!--				
+					<li>
+						<label>X:</label> <a href="https://www.twitter.com/v1z3n" target="_blank">@v1z3n</a>
+					</li>
+					<li>
+						<label>Slideshare:</label> <a href="http://es.slideshare.net/mordraug">Docs and presentations</a>
+					</li>
+					<li>
+						<label>Twitch:</label> <a href="https://www.twitch.com/vicen_herrera" target="_blank">twitch.com/vicen_herrera</a>
+					</li>
+					<li>
+						<label>Stack Overflow:</label> <a href="http://stackoverflow.com/users/874582/vicenteherrera">Stack Overflow profile</a>
+					</li>
+					-->
+				</ul>
+			</div>
+			<div id="author" class="main_div">
+				<h3>Published Author</h3>
+				<ul>
+					<li><a target="_blank" href="https://bit.ly/bica_o"
+						style="display: inline-flex;align-items: center;"><img src="bica.jpg" style="width:65px; height: 85px; border:1px solid #ccc; margin:0 10px 5px 0; float: left;" alt="Book cover" />
+						<div>
+							Building Intelligent Cloud Applications<br>
+							<small>Azure Machine Learning and Serverless Cloud Services</small><br>
+							<small>O'Reilly Media</small>
+						</div>
+					</a>
+					</li>
+				</ul>
+				<h3 style="clear:both;">Personal Blog Posts</h3>
+				<ul>
+					<li><a target="_blank" href="https://vicenteherrera.com/blog/log4j-part-iii/">Log4j 2 vulnerability, part III: Prevention, mitigation and fixing</a></li>
+					<li><a target="_blank" href="https://vicenteherrera.com/blog/log4j-part-ii/">Log4j 2 vulnerability, part II: Kubernetes POC</a></li>
+					<li><a target="_blank" href="https://vicenteherrera.com/blog/log4j-part-i/">Log4j 2 vulnerability, part I: History</a></li>
+					<li><a target="_blank" href="https://vicenteherrera.com/blog/what-is-a-cve/">What is a CVE?</a></li>
+					<li><a target="_blank" href="https://vicenteherrera.com/blog/intro-mitre-attack/">Introduction to MITRE ATT&CK</a></li>
+				</ul>
+				<h3>External Blog Posts</h3>
+				<ul>
+					
+					<li><a target="_blank" href="https://control-plane.io/posts/future-open-source-llm-killchains-a-talk-by-vicente-herrera/">Future Open Source LLM Killchains! A Talk by Vicente Herrera</a></li>				
+					<li><a target="_blank" href="https://control-plane.io/posts/bringing-light-to-risks-lurking-in-the-black-boxes-of-ai-models/">Bringing light to risks lurking in the black boxes of AI models</a></li>				
+					<li><a target="_blank" href="https://malditasconsultoras.com/entrevista-a-vicente-herrera-un-todo-terreno-del-mundo-it/">Entrevista a Vicente Herrera: Un todo terreno del mundo IT</a></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/ciem-security-sysdig-secure/">Cloud Infrastructure Entitlements Management (CIEM) with Sysdig Secure</a></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/cloud-security-posture-aws/">AWS CIS: Manage cloud security posture on AWS infrastructure</a><br /></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/threat-detection-aws-cloud-containers/">Unified threat detection for AWS cloud and containers</a> 
+						<a target="_blank" href="https://cloudsecurityalliance.org/blog/2021/05/17/unified-threat-detection-for-aws-cloud-and-containers-to-reduce-risk-using-sysdig/">CSA</a>
+						<a target="_blank" href="https://aws.amazon.com/blogs/apn/unifying-threat-detection-for-cloud-and-containers-to-reduce-risk-using-sysdig/">AWS</a></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/mitigating-weave-scope/">Preventing malicious use of Weave Scope</a><br /></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/soc-2-compliance/">SOC 2 compliance for containers and Kubernetes security</a><br /></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/nist-800-53-compliance/">NIST 800-53 compliance for containers and Kubernetes</a><br /></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/image-scanning-google-cloud-build/">Image scanning for Google Cloud Build</a><br /></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/aws-threat-detection-cloudtrail/">AWS threat detection using CloudTrail and Sysdig Secure</a><br /></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/fargate-image-scanning/">Automate Fargate image scanning</a>
+						<a target="_blank" href="https://aws.amazon.com/blogs/apn/automating-aws-fargate-image-scanning-to-block-container-threats/">AWS</a></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/securing-tekton-pipelines-openshift/">Securing Tekton pipelines in OpenShift with Sysdig</a><br /></li>
+					<li><a target="_blank" href="https://sysdig.com/blog/malicious-python-libraries-jeilyfish-dateutil/">Protection From Malicious Python Libraries Jeilyfish and Python3-dateutil</a><br /></li>
+				</ul>
+				<h3>Open Source</h3>
+				<ul class="open_source">
+					<li><a target="_blank" href="https://github.com/finos/ai-readiness">Fintech Open Source Foundation - AI Readiness (core team)</a></li>
+					<li><a target="_blank" href="https://github.com/finos/common-cloud-controls">Fintech Open Source Foundation - Common Cloud Controls (maintainer)</a></li>
+					<li><a target="_blank" href="https://github.com/vicenteherrera/psa-checker">psa-checker: Pod Security Standards static checker (creator)</a></li>
+					<li><a target="_blank" href="https://github.com/vicenteherrera/falco-workshop">Falco Workshop virtual machines (creator)</a></li>				
+					<li><a target="_blank" href="https://github.com/falcosecurity/falco/commits?author=vicenteherrera">Falco: Cloud-Native runtime security</a></li>
+					<li><a target="_blank" href="https://github.com/sysdiglabs/aks-audit-log/commits?author=vicenteherrera">Azure Kubernetes Service audit log Sysdig integration</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content-column">
+			<div id="participations" class="main_div">
+				<h3 id="participations">Participations</h3>
+				<ul class="participations with-video">
+					<li><a target="_blank" href="https://control-plane.io/posts/future-open-source-llm-killchains-a-talk-by-vicente-herrera/">🎬 Future Open Source LLM Killl Chains</a><br />
+						<span class="position">Speaker, Secure AI Summit (CloudNative SecurityCon NA), Seattle, June 2024</span><br />
+					</li>
+				</ul>
+				<iframe width="560" height="315" style="background-color: #ccc;" src="https://www.youtube.com/embed/AQi59puGs94?si=qlT5EFnQiCTBzqS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<ul class="participations with-video">	
+					<li><a target="_blank" href="https://control-plane.io/posts/bringing-light-to-risks-lurking-in-the-black-boxes-of-ai-models/">🎬 Bringing light to risks lurking in the black boxes of AI models</a><br />
+						<span class="position">Speaker, State of Open Con 2024, London, February 2024</span><br />
+					</li>
+				</ul>
+				<iframe width="560" height="315" style="background-color: #ccc;" src="https://www.youtube.com/embed/WhL7WimKWpg?si=cNjGsfUa09oFuifS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<ul class="participations">
+					<li><a href="https://colocatedeventseu2025.sched.com/event/1u5g3/open-source-tools-to-empower-ethical-and-robust-ai-systems-vicente-herrera-alberto-rodriguez-fernandez-control-plane">🔥<b>Upcoming!</b>: Open Source Tools To Empower Ethical and Robust AI Systems</a><br />
+						<span class="position">Speaker, Cloud Native + Kubernetes AI Day, London, 1st April 2025</span></li>
+					<li><a href="https://www.youtube.com/@aisafetylondon">AI Safety London - Inaugural Talks</a><br />
+						<span class="position">Host, AI Safety London, London, 27 February 2025</span></li>
+					<li><a target="_blank" href="https://www.youtube.com/watch?v=OtltWiMAIDA">🎬 RIESGOS.AI : ¿Peligro o evolución para la humanidad? (Spanish)</a><br />
+						<span class="position">Debate, xHubAI, Agosto 2024</span></li>
+					<li><a target="_blank" href="https://openwebinars.net/cursos/ejecuta-modelos-ia-seguros/">Ejecuta Modelos de IA sin riesgos de seguridad</a><br />
+						<span class="position">Masterclass, Openwebinars, June 2024</span></li>
+					<li><a target="_blank" href="https://bit.ly/blockchain-ing">Blockchain: Qué es, y qué soluciona</a><br />
+						<span class="position">Masterclass, Colegio Oficial de Ingenieros Informáticos Andalucía Occidental, May 2024</span></li>				
+					<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=vhw_mp7R7LM">🎬 TESCREAL : El acrónimo de los sueños y pesadillas sobre Inteligencia Artificial (Spanish)</a><br />
+						<span class="position">Debate, xHubAI, April 2024</span></li>
+					<li><a target="_blank" href="https://www.youtube.com/watch?v=cbw2jju0oq0">🎬 Seguridad AI: ¿Es la era de la Inteligencia Artificial segura para la Humanidad? (Spanish)</a><br />
+						<span class="position">Interview, xHubAI, March 2024</span></li>
+					<li class="low"><a target="_blank" href="https://www.meetup.com/ia-generativa-sevilla/events/298308303/">Evita crear a Skynet: inteligencia artificial segura y justa</a><br />
+						<span class="position">Speaker, IA Generativa Sevilla, Sevilla, January 2024</span></li>
+					<li><a target="_blank" href="https://www.youtube.com/watch?v=7L1qyhq_lr0">🎬 Advanced EKS Networking (Spanish)</a><br />
+						<span class="position">Speaker, Kubernetes Community Days Spain, December 2023</span></li>
+					<li class="low"><a target="_blank" href="https://posgradoadministracion.unmsm.edu.pe/actualidad/eventos/visiones-comerciales-globales-1700267508241">Navegando por el Nuevo Horizonte: Inteligencia Artificial, Oportunidades de Negocio y Riesgos Asociados</a><br />
+						<span class="position">Speaker, Foro Internacional Visiones Comerciales Globales, Universidad Nacional Mayor San Marcos, November 2023</span></li>
+					<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=FqscrNUB1jw">🎬 Minikube flash talk (Spanish)</a><br />
+						<span class="position">Founder, Speaker, Cloud Native Sevilla, November 2023</span></li>
+					<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=x3CSVGiXOy0">🎬 Presentación comunidad Cloud Native Sevilla (Spanish)</a><br />
+						<span class="position">Founder, Speaker, Cloud Native Sevilla, October 2023</span></li>
+					<li><a target="_blank" href="https://cudacu.com/nuevas-oportunidades-de-negocio-en-la-ia/">Nuevas oportunidades de negocio en la IA</a><br />
+						<span class="position">Speaker, Cudacu, May 2023</span></li>
+					<li class="low"><a target="_blank" href="https://esoliupo.es/actividades-realizadas/cybersec-talks/">Historia de la vulnerabilidad Log4j</a><br />
+						<span class="position">Speaker, ESOLIUPO, March 2023</span></li>
+					<li><a target="_blank" href="https://www.meetup.com/fullstacksevilla/events/291726888/">Seguridad de cero a cien con containers y Kubernetes</a><br />
+						<span class="position">Speaker, Full Stack Sevilla, March 2023</span></li>
+					<li ><a target="_blank" href="https://www.youtube.com/watch?v=oHhGczTizYQ">🎬 Pod Security Standards and Admission (Spanish)</a><br />
+						<span class="position">Speaker, Cloud App Developers, December 2023</span></li>				
+					<li class="low"><a target="_blank" href="https://www.facebook.com/giraldafm/videos/577912777272565">📻 Ecosistema Profesional - Inteligencia Artificial (Spanish)</a><br />
+						<span class="position">Expert guest, Giralda FM Radio, July 2022</span></li>
+					<li><a target="_blank" href="https://www.facebook.com/giraldafm/videos/573866724140475">📻 Ecosistema Profesional - Metaverso (Spanish)</a><br />
+						<span class="position">Expert guest, Giralda FM Radio, June 2022</span></li>
+					<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=6Ao43iQdEQI">Startup Weekend Sevilla 2021</a><br />
+						<span class="position">Mentor, SevillaUp & Techstars, 2021</span></li>
+					<li class="low"><a target="_blank" href="https://docs.google.com/presentation/d/1VIrm3cJbyIu60LmH-3t9OR1cvEizJ5CNrc6smAe6GKo/edit?usp=sharing">Containers and Kubernetes Security</a><br />
+						<span class="position">Speaker, InnoSoft Days - University of Seville, 2021</span></li>			
+					<li class="low"><a target="_blank" href="https://www.techstrongevents.com/cloudnative2021/session/609929/introduction-to-cloud-native-compliance-and-benchmarks">Cloud Native Compliance and Benchmarks</a><br />
+						<span class="position">Speaker, Cloud Native Days with Kubernetes, 2021</span></li>
+					<li><a target="_blank" href="https://www.youtube.com/watch?v=3a_UjTXsITs">🎬 Detecting cryptomining with Falco (Spanish)</a><br />
+						<span class="position">Speaker, Kubernetes Community Days Spain, 2021</span></li>
+					<li class="low"><a target="_blank" href="https://community.codemotion.com/hackmadrid-27/meetups/monitoreo-en-dockerkubernetes">From DevOps to DevSecOps</a><br />
+						<span class="position">Speaker, CodeMotion, 2020</span></li>
+					<li><a target="_blank" href="https://youtu.be/M3f6-ioY9rs">🎬 Detecting Anomalous Activity in Rancher with Falco</a><br />
+						<span class="position">Speaker, Kubernetes Master Class, Rancher Labs, 2020</span></li>
+					<li class="low"><a target="_blank" href="http://www.securitybsides.com/w/page/138211752/BSidesBerlin2020">Bins in the cage Falco is watching</a><br />
+						<span class="position">Speaker, BSides Berlin, 2020</span></li>
+					<li><a target="_blank" href="https://www.youtube.com/watch?v=iyyecB6dPUA&t=894s">🎬 Falco kernel and Kubernetes security (Spanish)</a><br />
+						<span class="position">Speaker, HackMadrid 2020</span></li>
+					<li><a target="_blank" href="https://www.youtube.com/watch?v=DD6Rk_7lkI0&list=PLf_Lmegw9Mew65HlRsayJu24hzpzhV98T">🎬 Azure serverless for data intelligence (Spanish)</a><br />
+						<span class="position">Speaker, Seville DataBeers, 2019</span></li>
+					<li class="low"><a href="#">Introduction to project management with Scrum</a><br />
+						<span class="position">Speaker, University of Seville, 2017</span></li>
+					<li class="low"><a target="_blank" href="https://sevillaworld.com/startup-weekend-sevilla/">Startup Weekend Sevilla Videogames 2016</a><br />
+						<span class="position">Mentor, SevillaUp & Techstars, 2016</span></li>					
+					<li class="low"><a href="#">GesProSev: Seville Project Management group</a><br />
+						<span class="position">Founder and regular speaker, 2016 to 2019</span></li>
+					<li class="low"><a target="_blank" href="https://youtu.be/AhcuLa0pExc">Manage yourself as a team</a><br />
+						<span class="position">Speaker, Sevilla Developers Conference 2º Edition, 2016</span></li>
+					<li class="low"><a target="_blank" href="https://sevilla.abc.es/provincia-alcala-de-guadaira/20140520/sevi-como-hacer-sitio-propio-201405201855.html">Cómo hacer una web en dos horas a coste cero</a><br />
+						<span class="position">Teacher, Espacio Coworking Colaborando, 2014</span></li>
+					<li class="low"><a target="_blank" href="https://www.youtube.com/watch?v=I6nzLkb4k6s">Startup Weekend Sevilla 2013</a><br />
+						<span class="position">Mentor, SevillaUp & Techstars, 2013</span></li>
+					<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">+more</a></li>
+				</ul>	
+			</div>
+			<div id="training" class="main_div">
+				<h3>Training</h3>
+				<ul class="training">
+					<li><a target="_blank" href="https://vicenteherrera.com/curso_falco">🎬 Falco course: Runtime security on hosts, containers, Kubernetes and cloud (Spanish)</a></li>
+					<li><a target="_blank" href="https://vicenteherrera.com/kubernetes_tutorial">Kubernetes tutorial: Azure, Terraform, Key Vault, Helm, Skaffold, Prometheus and Grafana</a></li>
+					<li><a target="_blank" href="https://vicenteherrera.com/curso_desarrollo_web">Web development: HTML, CSS, responsive web design, Bootstrap, JavaScript and PHP (Spanish)</a></li>
+					<!--
+					<li><a href="#">Agile and Scrum</a></li>
+					<li><a href="#">Microsoft Project</a></li>
+					<li><a href="#">Transmedia</a></li>
+					<li><a href="#participations" onclick="javascript: change_display(document.getElementsByClassName('low'),'block'); this.style.display='none'">+more</a></li></li>
+					-->
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>
