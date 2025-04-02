@@ -156,27 +156,35 @@
 			.main_div {
 				width: auto;
 				padding: 5px 10px;
+				max-width: 100%;
 			}
 			label { 
 				width: 100%;
+				display: block;
+				float: none;
+				margin: 10px 0 5px 0;
+				padding: 0;
 			}
 			ul {
 				padding-inline-start: 0;
 				margin-left: 0;
 			}
-			.main_div ul li .position {
-				font-size: 15px;
+			.main_div ul li {
+				margin-bottom: 15px;
 			}
 			.main_div a {
 				font-size: 17px;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 8px 10px;
+				margin: 0 0 5px 0;
 			}
 			.main_div a#email {
 				/* font-size: 14px; */
 			}
-			label {
-				font-size: 15px;
+			li.two_lines { 
+				margin-bottom: inherit; 
 			}
-			li.two_lines { margin-bottom: inherit; }
 		}
 
 	</style>
