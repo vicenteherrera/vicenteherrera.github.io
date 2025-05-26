@@ -1,0 +1,15 @@
+{
+  "name": "Vicente #3",
+  "description": "Tercer NFT",
+  "image": "https://vicenteherrera.com/nft/3.png",
+  "attributes": [
+      {
+          "trait_type": "Background",
+          "value": "Orange"
+      },
+      {
+          "trait_type": "Style",
+          "value": "Mono"
+      }
+  ]
+}

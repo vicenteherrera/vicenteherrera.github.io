@@ -1,0 +1,15 @@
+{
+  "name": "Vicente #4",
+  "description": "Cuarto NFT",
+  "image": "https://vicenteherrera.com/nft/4.png",
+  "attributes": [
+      {
+          "trait_type": "Background",
+          "value": "Orange"
+      },
+      {
+          "trait_type": "Style",
+          "value": "Mono"
+      }
+  ]
+}
